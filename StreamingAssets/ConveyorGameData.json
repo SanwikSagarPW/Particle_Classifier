@@ -1,0 +1,294 @@
+{
+  "game_template": "Conveyor Classifier",
+  "topic": "Particulate Nature of Matter",
+  "total_levels": 3,
+  "max_total_xp": 200,
+  
+  "levels": [
+    {
+      "level": 1,
+      "objective_text": "Sort Solid, Liquid, and Gas substances!",
+      "conveyor_speed_modifier": 0.4,
+      "total_items_in_level": 10,
+      "item_spawn_interval_seconds": 8,
+      "xp_per_correct": 5,
+      "xp_per_incorrect": -2,
+      "combo_bonus_xp": 0,
+      "target_xp": 50,
+      "reactor": 0,
+
+      "containers": [
+        { "name": "Solid", "id": "Solid" },
+        { "name": "Liquid", "id": "Liquid" },
+        { "name": "Gas", "id": "Gas" }
+      ],
+
+      "items": [
+        {
+          "id": "ice_cube",
+          "display_text": "Ice Cube",
+          "correct_category_name": "Solid",
+          "presentation_mode": "NAME",
+          "hint_text": "Solids have tightly packed particles with a fixed shape and volume."
+        },
+        {
+          "id": "water_glass",
+          "display_text": "Water in Glass",
+          "correct_category_name": "Liquid",
+          "presentation_mode": "NAME",
+          "hint_text": "Liquids take the shape of their container but have a fixed volume."
+        },
+        {
+          "id": "air_balloon",
+          "display_text": "Air in a Balloon",
+          "correct_category_name": "Gas",
+          "presentation_mode": "NAME",
+          "hint_text": "Gases fill all available space — their particles spread out freely."
+        },
+        {
+          "id": "iron_nail",
+          "display_text": "Iron Nail",
+          "correct_category_name": "Solid",
+          "presentation_mode": "NAME",
+          "hint_text": "Solids have tightly packed particles with a fixed shape and volume."
+        },
+        {
+          "id": "milk_glass",
+          "display_text": "Milk",
+          "correct_category_name": "Liquid",
+          "presentation_mode": "NAME",
+          "hint_text": "Liquids take the shape of their container but have a fixed volume."
+        },
+        {
+          "id": "camphor_block",
+          "display_text": "Camphor Block",
+          "correct_category_name": "Solid",
+          "presentation_mode": "NAME",
+          "hint_text": "Solids have tightly packed particles with a fixed shape and volume."
+        },
+        {
+          "id": "rock_salt",
+          "display_text": "Rock Salt",
+          "correct_category_name": "Solid",
+          "presentation_mode": "NAME",
+          "hint_text": "Solids have tightly packed particles with a fixed shape and volume."
+        },
+        {
+          "id": "mercury_thermometer",
+          "display_text": "Mercury (Thermometer)",
+          "correct_category_name": "Liquid",
+          "presentation_mode": "NAME",
+          "hint_text": "Mercury is a liquid metal — it flows and takes its container's shape."
+        },
+        {
+          "id": "steam_kettle",
+          "display_text": "Steam from Kettle",
+          "correct_category_name": "Gas",
+          "presentation_mode": "NAME",
+          "hint_text": "Gases fill all available space — their particles spread out freely."
+        },
+        {
+          "id": "wooden_block",
+          "display_text": "Wooden Block",
+          "correct_category_name": "Solid",
+          "presentation_mode": "NAME",
+          "hint_text": "Solids have tightly packed particles with a fixed shape and volume."
+        }
+      ]
+    },
+
+    {
+      "level": 2,
+      "objective_text": "Read the LED panel and sort each mystery substance!",
+      "conveyor_speed_modifier": 0.6,
+      "total_items_in_level": 10,
+      "item_spawn_interval_seconds": 6,
+      "xp_per_correct": 7,
+      "xp_per_incorrect": -2,
+      "combo_bonus_xp": 0,
+      "target_xp": 70,
+      "reactor": 1,
+
+      "containers": [
+        { "name": "Solid", "id": "Solid" },
+        { "name": "Liquid", "id": "Liquid" },
+        { "name": "Gas", "id": "Gas" }
+      ],
+      "items": [
+        {
+          "id": "mystery_a",
+          "display_text": "Vibrates Fixed",
+          "correct_category_name": "Solid",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Solids vibrate in fixed positions — particles cannot move freely."
+        },
+        {
+          "id": "mystery_b",
+          "display_text": "Takes Shape",
+          "correct_category_name": "Liquid",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Liquids take the shape of any container due to free-flowing particles."
+        },
+        {
+          "id": "mystery_c",
+          "display_text": "Fills Space",
+          "correct_category_name": "Gas",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Gases fill all available space due to negligible interparticle attractions."
+        },
+        {
+          "id": "mystery_d",
+          "display_text": "High Density",
+          "correct_category_name": "Solid",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Solids are densely packed — particles are very close together."
+        },
+        {
+          "id": "mystery_e",
+          "display_text": "Moderate Attraction",
+          "correct_category_name": "Liquid",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Liquids have moderate interparticle attraction — stronger than gas, weaker than solid."
+        },
+        {
+          "id": "mystery_f",
+          "display_text": "Compressible",
+          "correct_category_name": "Gas",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Gases are easily compressed because of the large spaces between particles."
+        },
+        {
+          "id": "mystery_g",
+          "display_text": "Strong Attraction",
+          "correct_category_name": "Solid",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Solids have strong interparticle forces that hold particles in fixed positions."
+        },
+        {
+          "id": "mystery_h",
+          "display_text": "Limited Freedom",
+          "correct_category_name": "Liquid",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Liquid particles are free to move but only within a limited space."
+        },
+        {
+          "id": "mystery_i",
+          "display_text": "Diffuses Rapidly",
+          "correct_category_name": "Gas",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Gases diffuse rapidly due to fast-moving particles with negligible attraction."
+        },
+        {
+          "id": "mystery_j",
+          "display_text": "Fixed Shape",
+          "correct_category_name": "Solid",
+          "presentation_mode": "PROPERTY_CUE",
+          "hint_text": "Solids have a fixed shape and volume — particles cannot move from their positions."
+        }
+      ]
+    },
+
+    {
+      "level": 3,
+      "objective_text": "Identify the state transition — sort by what's happening to each substance!",
+      "conveyor_speed_modifier": 0.8,
+      "total_items_in_level": 10,
+      "item_spawn_interval_seconds": 4,
+      "xp_per_correct": 8,
+      "xp_per_incorrect": -2,
+      "combo_bonus_xp": 0,
+      "target_xp": 80,
+      "reactor": 0,
+
+      "containers": [
+        { "name": "Sublimation", "id": "Sublimation" },
+        { "name": "Melting", "id": "Melting" },
+        { "name": "Boiling", "id": "Boiling" },
+        { "name": "Evaporation", "id": "Evaporation" }
+      ],
+
+      "items": [
+        {
+          "id": "dry_ice",
+          "display_text": "",
+          "correct_category_name": "Sublimation",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Dry ice (CO₂) goes directly from solid to gas — this is sublimation."
+        },
+        {
+          "id": "candle_wax",
+          "display_text": "",
+          "correct_category_name": "Melting",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Candle wax near a flame turns from solid to liquid — that's melting."
+        },
+        {
+          "id": "boiling_water",
+          "display_text": "",
+          "correct_category_name": "Boiling",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Water boiling in a pressure cooker converts entirely to steam — that's boiling."
+        },
+        {
+          "id": "wet_clothes",
+          "display_text": "",
+          "correct_category_name": "Evaporation",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Wet clothes dry as water evaporates slowly from the surface."
+        },
+        {
+          "id": "iodine_crystals",
+          "display_text": "",
+          "correct_category_name": "Sublimation",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Iodine crystals heated gently turn directly to purple vapour — sublimation."
+        },
+        {
+          "id": "butter_pan",
+          "display_text": "",
+          "correct_category_name": "Melting",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Butter softens and turns liquid when heated — that's melting."
+        },
+        {
+          "id": "milk_boiling",
+          "display_text": "",
+          "correct_category_name": "Boiling",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Milk heated to bubbling point is undergoing boiling — liquid to gas."
+        },
+        {
+          "id": "petrol_open",
+          "display_text": "",
+          "correct_category_name": "Evaporation",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Petrol in an open container evaporates slowly at room temperature."
+        },
+        {
+          "id": "naphthalene_balls",
+          "display_text": "",
+          "correct_category_name": "Sublimation",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Naphthalene balls shrink without melting — they sublime directly to gas."
+        },
+        {
+          "id": "ice_melting",
+          "display_text": "",
+          "correct_category_name": "Melting",
+          "presentation_mode": "IMAGE_ONLY",
+          "hint_text": "Ice melting in a glass is a classic solid-to-liquid state change — melting."
+        }
+      ]
+    }
+  ],
+
+  "star_rating_thresholds": {
+    "3_stars": 0.75,
+    "2_stars": 0.5,
+    "1_star": 0.0
+  },
+
+  "reaction_types_available": [
+    "NO_REACTION"
+  ]
+}
