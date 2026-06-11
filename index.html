@@ -96,6 +96,16 @@
           transform: rotate(-90deg);
         }
       }
+
+      /* Force the rotate overlay on portrait screens via CSS */
+      @media screen and (orientation: portrait) {
+        #rotation-animation {
+          display: flex !important;
+        }
+        #page-container {
+          display: none !important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -174,6 +184,18 @@
       meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
       document.getElementsByTagName('head')[0].appendChild(meta);
 
+      // Try to lock orientation to landscape using the Screen Orientation API
+      function lockLandscape() {
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock('landscape').catch(function() {
+            // Lock not supported or denied (e.g., desktop) — fall back to CSS overlay
+          });
+        }
+      }
+      document.addEventListener('click', lockLandscape, { once: true });
+      document.addEventListener('touchstart', lockLandscape, { once: true });
+      lockLandscape();
+
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -187,16 +209,25 @@
         });
       };
       
-      // Show rotation animation if in portrait mode
-      window.addEventListener('orientationchange', function() {
-        if (window.orientation === 0 || window.orientation === 180) {
+      // Show rotation animation if in portrait mode on mobile
+      function checkOrientation() {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (isMobile && window.innerHeight > window.innerWidth) {
           rotationAnimation.style.display = 'flex';
+          pageContainer.style.display = 'none';
         } else {
           rotationAnimation.style.display = 'none';
+          pageContainer.style.display = 'flex';
         }
+      }
+
+      window.addEventListener('resize', checkOrientation);
+      window.addEventListener('orientationchange', function() {
+        setTimeout(checkOrientation, 100);
       });
 
       // Initial setup calls before loading starts
+      checkOrientation();
       applyLetterboxing(); 
       document.body.appendChild(script);
     </script>
