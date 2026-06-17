@@ -104,7 +104,7 @@
       "total_items_in_level": 10,
       "item_spawn_interval_seconds": 6,
       "xp_per_correct": 7,
-      "xp_per_incorrect": -2,
+      "xp_per_incorrect": -3,
       "combo_bonus_xp": 0,
       "target_xp": 70,
       "reactor": 1,
@@ -195,7 +195,7 @@
       "total_items_in_level": 10,
       "item_spawn_interval_seconds": 4,
       "xp_per_correct": 8,
-      "xp_per_incorrect": -2,
+      "xp_per_incorrect": -4,
       "combo_bonus_xp": 0,
       "target_xp": 80,
       "reactor": 0,
@@ -283,7 +283,7 @@
   ],
 
   "star_rating_thresholds": {
-    "3_stars": 0.75,
+    "3_stars": 0.8,
     "2_stars": 0.5,
     "1_star": 0.0
   },
